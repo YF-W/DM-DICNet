@@ -10,7 +10,8 @@ Authors: Yufei Wang , Li Zhang , Yutong Zhang , Yuquan Xu , Yuxuan Wan , Zhixuan
 
 ### 1. Architecture Overview
 
-![image-20240722150751700](C:\Users\zly26\AppData\Roaming\Typora\typora-user-images\image-20240722150751700.png)
+![image-20240722150751700](https://github.com/user-attachments/assets/d9931ac9-d3a3-4e52-a715-2f6c003d8423)
+
 
 In our encoder-decoder structure, the Global Information Capture Branch (GICB) uses atrous convolution technology to capture global information, producing smooth edges while retaining core information to aid the network in understanding the relationship between lesions and surrounding tissues. The Core Information Capture Branch (CICB) enhances the central features of the GICB by processing cropped images and compensates for the loss of global information through information sharing, ensuring coherence between global and local features. The ResNet branch focuses on refining local information, utilizing residual structures to avoid gradient vanishing and explosion, and improving the ability to capture subtle structural changes, thereby significantly enhancing the quality of the segmentation results.
 
