@@ -4,7 +4,7 @@ paper address:
 
 Semantic segmentation technology has become a key force in advancing the medical system, as it can accurately identify and delineate lesions in medical images. The U-shape network has become the primary tool for semantic segmentation, but single-branch structures struggle with efficient information transmission, and neural networks often fail to capture critical information. Furthermore, simple bottlenecks are insufficient for extracting rich, deep-layer information. Lastly, most networks can only handle a limited number of lesion types and cannot be extended to multiple datasets.
 
-## Paper: MIR-CSNet(Multi-branch disruptive information transmission network for multi-lesion semantic segmentation)
+## Paper:DM-DICNet(Multi-branch disruptive information transmission network for multi-lesion semantic segmentation)
 
 Authors: Yufei Wang , Li Zhang , Yutong Zhang , Yuquan Xu , Yuxuan Wan , Zhixuan Chen ,  Liangyan Zhao , Qinyu Zhao , Guokai Chen , Ruixin Cao , YIxi Yang , Xi Yu
 
