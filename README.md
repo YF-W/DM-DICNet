@@ -6,7 +6,7 @@ Semantic segmentation technology has become a key force in advancing the medical
 
 ## Paper:DM-DICNet(Multi-branch Disruptive Information Transmission Network For Multi-lesion Semantic Segmentation)
 
-Authors  :  Yufei Wang , Yutong Zhang , Li Zhang , Yuquan Xu , Yuxuan Wan , Zhixuan Chen ,  Liangyan Zhao , Qinyu Zhao , Guokai Chen , Ruixin Cao , YIxi Yang , Xi Yu
+Authors  :  Yuefei Wanga, *, Yutong Zhanga, Yuxuan Wanb, Liangyan Zhaoa, Qinyu Zhaob, Guokai Chena
 
 ### 1. Architecture Overview
 
