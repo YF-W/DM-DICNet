@@ -38,10 +38,40 @@ To avoid the simple identity mapping that introduces shallow image noise into th
 In neural network architectures, the Bottleneck serves as a bridge between the encoder and decoder, concentrating highly abstract and diverse features. However, existing Bottlenecks are often shallow, limiting their ability to delve deeply into information. To address this, we propose the SCHFE module, which employs a "split and merge" strategy, decomposing the input image into two paths: one for clear and the other for blurred information. These paths process detail and overall information separately, and are merged by an Information Anti-Aliasing Branch (IAB) for deep extraction. The spiral contraction-based channel reduction mechanism within the module facilitates seamless integration of multi-scale features, significantly enhancing the recognition accuracy of hidden lesions (e.g., polyps) and complex images (e.g., retina vessels), reducing the risk of overfitting, and improving the model’s generalization performance and stability.
 
 ### Performance
+# Superiority Metrics
+
+Two metrics are defined to quantify how much one network outperforms another, either across a group of datasets under a single indicator, or across a group of indicators on a single dataset.
+
+## IndicatorSuperiority
+
+IndicatorSuperiority measures the average advantage of `Net_x` over `Net_y` on a given indicator `ind` across a group of datasets:
 
 $$
-\text{IndicatorSuperiority}(Netx, Nety) = \frac{1}{n_D} \left( \sum_{i=1}^{n_D} \left( Netx_{D_i}^{ind} - Nety_{D_i}^{ind} \right) \right) \tag{7}
+\text{IndicatorSuperiority}(\text{Net}_x, \text{Net}_y)
+= \frac{1}{n_D} \sum_{i=1}^{n_D}
+\left( \text{Net}x_{D_i}^{ind} - \text{Net}y_{D_i}^{ind} \right)
 $$
+
+## DatasetSuperiority
+
+DatasetSuperiority measures the average advantage of `Net_x` over `Net_y` on a given dataset `D` across a group of indicators:
+
+$$
+\text{DatasetSuperiority}(\text{Net}_x, \text{Net}_y)
+= \frac{1}{n_{ind}} \sum_{i=1}^{n_{ind}}
+\left( \text{Net}x_D^{ind_i} - \text{Net}y_D^{ind_i} \right)
+$$
+
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| `Net_x`, `Net_y` | the two networks being compared |
+| `ind`, `ind_i` | a specific evaluation indicator, e.g. Dice, IoU |
+| `D`, `D_i` | a specific dataset |
+| `n_D` | the number of datasets |
+| `n_{ind}` | the number of indicators |
+
 
 | Method | Dice | IOU | LUNG | DRIVE | POLYP | BRAIN | TOOTH | SK | THYROID NODULE | LIVER | SYNAPSE |
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
