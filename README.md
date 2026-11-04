@@ -54,23 +54,8 @@ $$
 
 ## DatasetSuperiority
 
-DatasetSuperiority measures the average advantage of `Net_x` over `Net_y` on a given dataset `D` across a group of indicators:
+<img width="668" height="155" alt="image" src="https://github.com/user-attachments/assets/a8a0b317-9104-42da-8080-ab793bb5f909" />
 
-$$
-\text{DatasetSuperiority}(\text{Net}_x, \text{Net}_y)
-= \frac{1}{n_{ind}} \sum_{i=1}^{n_{ind}}
-\left( \text{Net}x_D^{ind_i} - \text{Net}y_D^{ind_i} \right)
-$$
-
-## Notation
-
-| Symbol | Meaning |
-|---|---|
-| `Net_x`, `Net_y` | the two networks being compared |
-| `ind`, `ind_i` | a specific evaluation indicator, e.g. Dice, IoU |
-| `D`, `D_i` | a specific dataset |
-| `n_D` | the number of datasets |
-| `n_{ind}` | the number of indicators |
 
 
 | Method | Dice | IOU | LUNG | DRIVE | POLYP | BRAIN | TOOTH | SK | THYROID NODULE | LIVER | SYNAPSE |
